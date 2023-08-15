@@ -42,7 +42,7 @@ function GetCookie() {
             var CV = $request.headers['Cookie'] || $request.headers['cookie'];
             if (CV.match(/(pt_key=.+?pt_pin=|pt_pin=.+?pt_key=)/)) {
                 const CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
-                $.notify('临时Cookie','',CookieValue);
+                $.notify('','',CookieValue);
                 var pt_pin =CV.match(/pt_pin=.+?;/)
                 var pin ="pin="+pt_pin.toString().split('=')[1]
                 $.notify('wsk_pin','',pin);
